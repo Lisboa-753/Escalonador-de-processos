@@ -1,8 +1,7 @@
 
 **Gerenciamento de Processos com Algoritmos de Escalonamento**
 
-Este projeto implementa um simulador de gerenciamento de processos, no qual processos são criados aleatoriamente com diferentes características e podem ser executados
- com base em diferentes algoritmos de escalonamento. O objetivo é comparar o desempenho de quatro algoritmos de escalonamento de processos: SJF (Shortest Job First), 
+Este projeto desenvolvido em grupo implementa um simulador de gerenciamento de processos, no qual processos são criados aleatoriamente com diferentes características e podem ser executados com base em diferentes algoritmos de escalonamento. O objetivo é comparar o desempenho de quatro algoritmos de escalonamento de processos: SJF (Shortest Job First), 
 SRTF (Shortest Remaining Time First), RR (Round Robin) e FIFO (First In First Out).
 
 **Funcionalidades**
