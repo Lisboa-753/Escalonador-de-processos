@@ -6,6 +6,39 @@ SRTF (Shortest Remaining Time First), RR (Round Robin) e FIFO (First In First Ou
 
 **Funcionalidades**
 
+O arquivo main.cpp é responsável pela criação e gerenciamento dos processos. Ele implementa a lógica principal do programa e utiliza um menu interativo para permitir ao usuário executar diferentes ações. A seguir estão os principais pontos abordados no código:
+
+**Geração Aleatória de Processos:**
+
+O programa solicita ao usuário quantos processos devem ser criados.
+Para cada processo, atributos como PID, status (Running, Waiting, Stopped), memória usada, e tempo estimado de execução são gerados aleatoriamente usando a biblioteca <random>.
+Os processos são instâncias das classes derivadas de Processo: Real_Time, Batch, IO_Bound e IO_Bound_Caching.
+Interface de Menu:
+
+**O usuário é apresentado a um menu com quatro opções:**
+
+Mostrar lista de processos: Exibe todos os processos criados com seus atributos.
+Escolher algoritmo de execução: O usuário pode selecionar entre os algoritmos de escalonamento SJF, SRTF, RR ou FIFO para executar os processos.
+Comparar tempos de execução: Após a execução de todos os algoritmos, o programa compara e exibe o tempo total de execução de cada um.
+Sair: Encerra o programa.
+
+**Execução dos Processos:**
+
+O usuário escolhe um algoritmo de escalonamento, e o programa ajusta o tempo de execução dos processos conforme o algoritmo selecionado.
+Algoritmos disponíveis:
+SJF (Shortest Job First): Processos com menor tempo de execução são priorizados.
+SRTF (Shortest Remaining Time First): Semelhante ao SJF, mas considerando o tempo restante.
+RR (Round Robin): Alterna entre os processos com um quantum de tempo fixo.
+FIFO (First In First Out): Processos são executados na ordem em que foram criados.
+
+**Comparação de Algoritmos:**
+
+O código permite que o usuário execute cada algoritmo de escalonamento e compare os tempos totais de execução.
+
+**Limpeza de Memória:**
+
+Após o término do programa, todos os objetos alocados dinamicamente no vetor de processos são liberados, evitando vazamentos de memória.
+
 Geração aleatória de processos com atributos como PID, status (Running, Waiting, Stopped), memória utilizada, e tempo de execução estimado.
 Execução de processos com base em algoritmos de escalonamento de CPU:
 SJF (Shortest Job First)
